@@ -1,5 +1,13 @@
 #include <iostream>
-
+void menu(void) {
+    printf("\n");
+    printf("0 - Exit\n");
+    printf("1 - Add\n");
+    printf("2 - Subtract\n");
+    printf("3 - Multiply\n");
+    printf("4 - Divide\n");
+    printf("Select an option:\n");
+}
 void enterNumbers(int *number1, int *number2) {
     printf("Enter first number: ");
     scanf("%d", number1);
@@ -8,7 +16,19 @@ void enterNumbers(int *number1, int *number2) {
 }
 
 int main() {
-    int a,b;
-    enterNumbers(&a,&b);
-    return 0;
+    int option = 0;
+    int number1 = 0;
+    int number2 = 0;
+    int result = 0;
+    do {
+        menu();
+        scanf("%d", &option);
+        switch (option) {
+            case 0:
+                break;
+            default:
+                printf("Choose the right option...\n\n");
+        }
+    } while (option != 0);
+
 }
